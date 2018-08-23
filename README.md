@@ -1,7 +1,7 @@
 # Redactor Vue.js Component
 
 Vue-redactor helps [Redactor](https://imperavi.com/redactor/) to work as a Vue.js component. The Redactor Vue component is under MIT license. 
-However, in order to use this component you should purchase a Redactor license. 
+However, to use this component, you should purchase a Redactor license. 
 Please see [the buying page](https://imperavi.com/redactor/buy/) and [License Agreement](https://imperavi.com/redactor/license/).
 
 ## Compatibility
