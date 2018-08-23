@@ -1,13 +1,12 @@
 # Vue.js Redactor WYSIWYG Editor
 
-vue-redactor provides Vue bindings to [Redactor](https://imperavi.com/redactor/). The Redactor Vue component is under MIT license. 
+Vue-redactor helps [Redactor](https://imperavi.com/redactor/) to work as a Vue.js component. The Redactor Vue component is under MIT license. 
 However, in order to use this component you should purchase a Redactor license. 
 Please see [the buying page](https://imperavi.com/redactor/buy/) and [License Agreement](https://imperavi.com/redactor/license/).
 
 ## Compatibility
 
-- v2 later
-  - Vue.js 2.x
+- Vue.js 2.x
 
 ## Intialization
 
