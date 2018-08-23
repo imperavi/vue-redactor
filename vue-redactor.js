@@ -1,3 +1,13 @@
+/*
+    Redactor Vue Component
+    Version 1.0.0
+    Updated: August 23, 2018
+
+    http://imperavi.com/redactor/
+
+    Copyright 2018, Imperavi Ltd.
+    License: MIT
+*/
 Vue.component('Redactor', {
     template: '<textarea ref="redactor" :name="name" :placeholder="placeholder" :value="value" />',
     redactor: false,
