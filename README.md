@@ -12,7 +12,7 @@ Please see [the buying page](https://imperavi.com/redactor/buy/) and [License Ag
 ## Intialization
 
 ### One Way Binding
-```<!DOCTYPE html>
+```html
 <html>
 <head>
     <title>Redactor</title>
@@ -53,7 +53,7 @@ Please see [the buying page](https://imperavi.com/redactor/buy/) and [License Ag
 
 ### Two Way Binding
 
-```<!DOCTYPE html>
+```html
 <html>
 <head>
     <title>Redactor</title>
@@ -96,7 +96,7 @@ Please see [the buying page](https://imperavi.com/redactor/buy/) and [License Ag
 
 ### Call with options
 
-```
+```js
 new Vue({
     el: '#app',
     data() {
