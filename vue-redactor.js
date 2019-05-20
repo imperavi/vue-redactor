@@ -38,6 +38,9 @@ Vue.component('Redactor', {
     mounted() {
         this.init()
     },
+    beforeDestroy() {
+        this.destroy()
+    },
     methods: {
         init () {
             var me = this;
@@ -57,6 +60,14 @@ Vue.component('Redactor', {
             // set instance
             this.redactor = app;
             this.$parent.redactor = app;
+        },
+        destroy () {
+            // Call destroy on redactor to cleanup event handlers
+            $R(this.$refs.redactor, 'destroy');
+            
+            // unset instance for garbage collection
+            this.redactor = null;
+            this.$parent.redactor = null;
         },
         handleInput (val) {
             this.$emit('input', val);
