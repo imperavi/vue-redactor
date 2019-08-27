@@ -45,6 +45,7 @@ Vue.component('Redactor', {
         init () {
             var me = this;
             var callbacks = {
+		...me.config.callbacks,
                 changed: function(html) {
                     me.handleInput(html)
                     return html
