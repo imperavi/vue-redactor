@@ -32,7 +32,7 @@ Vue.component('Redactor', {
 	watch: {
 		value(newValue, oldValue)
 		{
-			if (!this.redactor.editor.isFocus()) this.redactor.source.setCode(newValue)
+			if (!this.redactor.editor.isFocus() && !this.redactor.editor.isSourceMode()) this.redactor.source.setCode(newValue)
 		}
 	},
     mounted() {
@@ -65,7 +65,7 @@ Vue.component('Redactor', {
         destroy () {
             // Call destroy on redactor to cleanup event handlers
             $R(this.$refs.redactor, 'destroy');
-            
+
             // unset instance for garbage collection
             this.redactor = null;
             this.$parent.redactor = null;
