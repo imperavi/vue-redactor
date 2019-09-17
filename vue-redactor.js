@@ -11,7 +11,7 @@
 Vue.component('Redactor', {
     template: '<textarea ref="redactor" :name="name" :placeholder="placeholder" :value="value" />',
     redactor: false,
-	props: {
+    props: {
         value: {
             default: '',
             type: String
@@ -49,7 +49,7 @@ Vue.component('Redactor', {
         init () {
             var me = this;
             var callbacks = {
-		...me.config.callbacks,
+                ...me.config.callbacks,
                 changed: function(html) {
                     me.handleInput(html)
                     return html
