@@ -29,12 +29,16 @@ Vue.component('Redactor', {
             type: Object
         }
     },
-	watch: {
-		value(newValue, oldValue)
-		{
-			if (!this.redactor.editor.isFocus() && !this.redactor.editor.isSourceMode()) this.redactor.source.setCode(newValue)
-		}
-	},
+    watch: {
+        value(newValue, oldValue)
+        {
+            if (this.redactor.editor.isFocus() || this.redactor.editor.isSourceMode()) {
+                return;
+            }
+
+            this.redactor.source.setCode(newValue);
+        }
+    },
     mounted() {
         this.init()
     },
