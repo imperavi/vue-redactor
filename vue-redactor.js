@@ -1,17 +1,17 @@
 /*
     Redactor Vue Component
-    Version 1.0.0
-    Updated: August 23, 2018
+    Version 1.0.1
+    Updated: October 3, 2019
 
     http://imperavi.com/redactor/
 
-    Copyright 2018, Imperavi Ltd.
+    Copyright 2019, Imperavi Ltd.
     License: MIT
 */
 Vue.component('Redactor', {
     template: '<textarea ref="redactor" :name="name" :placeholder="placeholder" :value="value" />',
     redactor: false,
-	props: {
+    props: {
         value: {
             default: '',
             type: String
@@ -29,12 +29,11 @@ Vue.component('Redactor', {
             type: Object
         }
     },
-	watch: {
-		value(newValue, oldValue)
-		{
-			if (!this.redactor.editor.isFocus()) this.redactor.source.setCode(newValue)
-		}
-	},
+    watch: {
+        value(newValue, oldValue){
+            if (!this.redactor.editor.isFocus()) this.redactor.source.setCode(newValue);
+        }
+    },
     mounted() {
         this.init()
     },
@@ -45,9 +44,8 @@ Vue.component('Redactor', {
         init () {
             var me = this;
             var callbacks = {
-		...me.config.callbacks,
                 changed: function(html) {
-                    me.handleInput(html)
+                    me.handleInput(html);
                     return html
                 }
             };
