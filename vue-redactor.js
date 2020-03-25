@@ -1,11 +1,11 @@
 /*
     Redactor Vue Component
-    Version 1.0.1
-    Updated: October 3, 2019
+    Version 1.1
+    Updated: March 25, 2020
 
     http://imperavi.com/redactor/
 
-    Copyright 2019, Imperavi Ltd.
+    Copyright 2020, Imperavi Ltd.
     License: MIT
 */
 Vue.component('Redactor', {
@@ -54,7 +54,7 @@ Vue.component('Redactor', {
             Vue.set(this.config, 'callbacks', callbacks);
 
             // call Redactor
-            var app = $R(this.$refs.redactor, this.config);
+            var app = Redactor(this.$refs.redactor, this.config);
 
             // set instance
             this.redactor = app;
@@ -62,8 +62,8 @@ Vue.component('Redactor', {
         },
         destroy () {
             // Call destroy on redactor to cleanup event handlers
-            $R(this.$refs.redactor, 'destroy');
-            
+            Redactor(this.$refs.redactor, 'destroy');
+
             // unset instance for garbage collection
             this.redactor = null;
             this.$parent.redactor = null;

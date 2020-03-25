@@ -47,6 +47,7 @@ Please see [the buying page](https://imperavi.com/redactor/buy/) and [License Ag
             }
         }
     });
+    </script>
 </body>
 </html>
 ```

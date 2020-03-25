@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vue Redator</title>
+        <link rel="stylesheet" href="/dist/redactor.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script type="module" src="index.js"></script>
+    </head>
+    <body>
+        <h2>One Way Binding</h2>
+        <div id="app-one">
+            <Redactor v-model="content" :config="configOptions"></Redactor>
+            {{ content }}
+        </div>
+
+        <br>
+        <h2>Two Way Binding</h2>
+        <div id="app-two">
+            <Redactor v-model="content" :config="configOptions"></Redactor>
+            <textarea v-model="content"></textarea>
+        </div>
+    </body>
+</html>
