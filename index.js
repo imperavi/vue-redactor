@@ -1,4 +1,4 @@
-import '/dist/redactor.min.js';
+import '/your-redactor-dist-path/redactor.min.js';
 import './vue-redactor.js';
 
 new Vue({

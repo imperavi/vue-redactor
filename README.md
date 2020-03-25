@@ -12,87 +12,67 @@ Please see [the buying page](https://imperavi.com/redactor/buy/) and [License Ag
 ## Intialization
 
 ### One Way Binding
+
+Import
+
 ```html
-<html>
-<head>
-    <title>Redactor</title>
-    <meta charset="utf-8">
+import '/your-redactor-dist-path/redactor.min.js';
+import './vue-redactor.js';
+```
 
-    <!--css -->
-    <link rel="stylesheet" href="/your-folder/redactor.css" />
-</head>
-<body>
-    <div id="app">
-        <Redactor v-model="content" :config="configOptions" />
-        {{ content }}
-    </div>
+Component
 
-    <!-- redactor.js -->
-    <script src="/your-folder/redactor.js"></script>
+```html
+<div id="app">
+    <Redactor v-model="content" :config="configOptions"></Redactor>
+    {{ content }}
+</div>
+```
 
-    <!-- vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+App
 
-    <!-- redactor vue component -->
-    <script src="/your-folder/vue-redactor.js"></script>
-
-    <!-- app -->
-    <script>
-    new Vue({
-        el: '#app',
-        data() {
-            return {
-                content: '<h1>Hello and welcome</h1>',
-                configOptions: {}
-            }
+```js
+new Vue({
+    el: '#app',
+    data() {
+        return {
+            content: '<h1>Hello and welcome</h1>',
+            configOptions: {}
         }
-    });
-    </script>
-</body>
-</html>
+    }
+});
 ```
 
 ### Two Way Binding
 
+Import
+
 ```html
-<html>
-<head>
-    <title>Redactor</title>
-    <meta charset="utf-8">
+import '/your-redactor-dist-path/redactor.min.js';
+import './vue-redactor.js';
+```
 
-    <!--css -->
-    <link rel="stylesheet" href="/your-folder/redactor.css" />
-</head>
-<body>
-    <div id="app">
-        <Redactor v-model="content" placeholder="Type here..." :config="configOptions" />
-        <textarea v-model="content"></textarea>
-    </div>
+Component
 
-    <!-- redactor.js -->
-    <script src="/your-folder/redactor.js"></script>
+```html
+<div id="app">
+    <Redactor v-model="content" :config="configOptions"></Redactor>
+    <textarea v-model="content"></textarea>
+</div>
+```
 
-    <!-- vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+App
 
-    <!-- redactor vue component -->
-    <script src="/your-folder/vue-redactor.js"></script>
-
-    <!-- app -->
-    <script>
-    new Vue({
-        el: '#app',
-        data() {
-            return {
-                content: '<h1>Hello and welcome</h1>',
-                configOptions: {}
-            }
+```js
+new Vue({
+    el: '#app',
+    data() {
+        return {
+            content: '<h1>Hello and welcome</h1>',
+            configOptions: {}
         }
-    });
-    </script>
-
-</body>
-</html>
+    }
+});
 ```
 
 ### Call with options
