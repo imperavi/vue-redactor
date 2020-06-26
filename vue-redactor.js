@@ -51,7 +51,12 @@ Vue.component('Redactor', {
             };
 
             // extend config
-            Vue.set(this.config, 'callbacks', callbacks);
+            if (typeof this.config.callbacks === 'undefined') {
+                Vue.set(this.config, 'callbacks', callbacks);
+            }
+            else {
+                this.config.callbacks.changed = callbacks.changed;
+            }
 
             // call Redactor
             var app = Redactor(this.$refs.redactor, this.config);
