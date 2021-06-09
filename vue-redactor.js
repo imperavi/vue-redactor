@@ -1,11 +1,11 @@
 /*
     Redactor Vue Component
-    Version 1.1
-    Updated: March 25, 2020
+    Version 1.2
+    Updated: June 9, 2021
 
     http://imperavi.com/redactor/
 
-    Copyright 2020, Imperavi Ltd.
+    Copyright 2021, Imperavi Ltd.
     License: MIT
 */
 Vue.component('Redactor', {
@@ -31,7 +31,11 @@ Vue.component('Redactor', {
     },
     watch: {
         value(newValue, oldValue){
-            if (!this.redactor.editor.isFocus()) this.redactor.source.setCode(newValue);
+            if (this.redactor.editor.isFocus() || this.redactor.editor.isSourceMode()) {
+                return;
+            }
+
+            this.redactor.source.setCode(newValue);
         }
     },
     mounted() {
